@@ -1,0 +1,12 @@
+<div class="gestion-container">
+  @if (last) {
+    <h3>Dernier contact</h3>
+    <p>Prénom : <span>{{ last.prenom }}</span></p>
+    <p>Nom : <span>{{ last.nom }}</span></p>
+    <p>Âge : <span>{{ last.age }}</span></p>
+    @if (last.email) {
+      <p>Email : <span>{{ last.email }}</span></p>
+    }
+    <p>Commentaire : <span>{{ last.commentaire }}</span></p>
+  }
+</div>

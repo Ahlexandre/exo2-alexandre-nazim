@@ -1,0 +1,32 @@
+<h2>Contact</h2>
+
+<form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+  <label>Prénom *</label>
+  <input type="text" formControlName="prenom">
+
+  <label>Nom *</label>
+  <input type="text" formControlName="nom">
+
+  <label>Âge</label>
+  <input type="number" formControlName="age">
+
+  <label>
+    <input type="checkbox" formControlName="hideEmail" (change)="toggleEmail()">
+    <span>Cacher l'email</span>
+  </label>
+
+  @if (!contactForm.get('hideEmail')?.value) {
+    <div>
+      <label>Email *</label>
+      <input type="email" formControlName="email">
+    </div>
+  }
+
+  <label>Commentaire *</label>
+  <textarea formControlName="commentaire"></textarea>
+
+  <button type="submit" [disabled]="contactForm.invalid">
+    Envoyer
+  </button>
+</form>

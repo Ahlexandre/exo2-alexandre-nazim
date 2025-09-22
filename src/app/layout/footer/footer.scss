@@ -1,0 +1,38 @@
+.footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 16px;
+  background: linear-gradient(135deg, #5a7dff, #28c0ff);
+  color: #fff;
+  box-shadow: 0 -4px 12px rgba(0,0,0,.25);
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+.contact-btn {
+  display: inline-grid;
+  place-items: center;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 16px;
+  text-decoration: none;
+  letter-spacing: .2px;
+  background: #fff;
+  color: #333;
+  box-shadow: 0 6px 12px rgba(79,124,255,.3);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.contact-btn:hover {
+  transform: scale(1.06);
+  box-shadow: 0 8px 16px rgba(79,124,255,.35);
+  color: #0d6efd;
+}
